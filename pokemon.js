@@ -4,8 +4,6 @@ const pokemonInputNode = document.querySelector(".pokemon-input");
 const searchButtonNde = document.querySelector(".button-search");
 const backButtonNode = document.querySelector(".button-back");
 const nextButtonNode = document.querySelector(".button-next");
-const heightPokemonNode = document.querySelector(".height-pokemon");
-const weightPokemonNode = document.querySelector(".weight-pokemon");
 
 const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 let url = "";
@@ -15,8 +13,6 @@ function pokemonRender(data) {
   pokemonNameTitleNode.innerHTML =
     data.name[0].toUpperCase() + data.name.slice(1);
   pokemonImageNode.src = data.sprites.front_default;
-  heightPokemonNode.innerHTML = `height: ${data.height}`;
-  weightPokemonNode.innerHTML = `weight: ${data.weight}`;
 }
 
 searchButtonNde.addEventListener("click", function () {
